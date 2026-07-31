@@ -77,45 +77,46 @@ if ( empty( $thumb_alt ) ) {
 
 <?php else: ?> 
 
-	<div class="container-fluid position-relative d-flex align-items-center bg-grad text-white hp-hero">
-			<div class="container pt-2 pb-4 py-lg-5 z-top-top">
-				<div class="row justify-content-center">
-					<div class="col-lg-8 text-center">
-						<h1 class="mt-0 mb-4">
-							<?php the_title(); ?>
-						</h1>
-						<?php if( get_field('hero_intro_text') ): ?>
-							<p class=""><?php the_field('hero_intro_text'); ?></p>
-						<?php endif; ?>
+	<div class="container-fluid position-relative d-flex align-items-center bg-grad mb-4 mb-lg-5 ">
+			<div class="container pt-lg-5 z-top-top hero">
+				<div class="row mt-5">
+					<div class="col-lg-6 mt-5">
+						<div class="bg-white p-4 text-blue w-100 mb-5">
+							<h1 class="mt-0 mb-4 add-arrow">
+								<?php the_title(); ?>
+							</h1>
+							<?php if( get_field('hero_intro_text') ): ?>
+								<p class=""><?php the_field('hero_intro_text'); ?></p>
+							<?php endif; ?>
 
-						<div class="w-100 d-flex justify-content-center flex-wrap">
-							<?php 
-							$link = get_field('hero_button_link');
-							if( $link ): 
-								$link_url = $link['url'];
-								$link_title = $link['title'];
-								$link_target = $link['target'] ? $link['target'] : '_self';
-								?>
-								<a class="btn-white me-md-2" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
-							<?php endif; ?>
-							<?php 
-							$link_secondary = get_field('hero_button_link_secondary');
-							if( $link_secondary ): 
-								$link_url = $link_secondary['url'];
-								$link_title = $link_secondary['title'];
-								$link_target = $link_secondary['target'] ? $link['target'] : '_self';
-								?>
-								<a class="btn-outline ms-md-2" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
-							<?php endif; ?>
+							<div class="w-100 d-flex flex-wrap">
+								<?php 
+								$link = get_field('hero_button_link');
+								if( $link ): 
+									$link_url = $link['url'];
+									$link_title = $link['title'];
+									$link_target = $link['target'] ? $link['target'] : '_self';
+									?>
+									<a class="btn-white me-md-2" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+								<?php endif; ?>
+								<?php 
+								$link_secondary = get_field('hero_button_link_secondary');
+								if( $link_secondary ): 
+									$link_url = $link_secondary['url'];
+									$link_title = $link_secondary['title'];
+									$link_target = $link_secondary['target'] ? $link['target'] : '_self';
+									?>
+									<a class="btn-outline ms-md-2" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+								<?php endif; ?>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 
+			<div class="position-absolute start-0 left-0 w-100 h-100 z-top bg-grad-hero"></div>
+			<img class="cover-img position-absolute start-0 top-0 z-top" src="http://cleland-roofing/wp-content/themes/clelandroofing/assets/img/footer-bg.svg" alt="Footer graphic">
 			<img class="position-absolute top-0 start-0 cover-img" src="<?php echo $thumb['0'];?>" alt="<?php the_title(); ?> - cleland roofing solutions">
-			<div class="position-absolute start-0 left-0 w-100 h-100 z-top bg-grad opacity-75"></div>
-
-			<img class="w-100 position-absolute start-0 bottom-0 z-top" src="<?php echo get_template_directory_uri(); ?>/assets/img/banner-mask.svg" alt="hero graphic">
 
 		</div>
 
