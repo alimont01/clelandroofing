@@ -31,12 +31,12 @@
                 wp_nav_menu( array(
                     'theme_location' => 'primary',
                     'menu_id'        => 'primary-menu',
-                    'menu_class'     => 'd-none d-md-flex mb-0 ps-0',
+                    'menu_class'     => 'd-flex mb-0 ps-0',
                     'container'      => 'nav',
-                    'container_class'=> 'main-navigation bg-white text-blue p-3 rounded-pill',
+                    'container_class'=> 'main-navigation bg-white text-blue p-3 rounded-pill d-none d-lg-block',
                 ) );
                 ?>
-                <button class="d-inline-block d-md-none ms-4 text-center rounded-circle mobile-menu" type="button" aria-controls="mobile-menu" aria-expanded="false">
+                <button class="d-inline-block d-lg-none ms-4 text-center rounded-circle mobile-menu" type="button" aria-controls="mobile-menu" aria-expanded="false">
                     <i class="bi bi-list fs-5"></i>
                 </button>
             </div>
@@ -44,7 +44,7 @@
     </div>
 </header>
 
-<div id="mobile-menu" class="w-100 p-4 darker-cream-bg">
+<div id="mobile-menu" class="w-100 p-4 bg-white">
     <div class="w-100 d-flex justify-content-end pt-2 z-top">
         <button class="mobile-menu-close text-center rounded-circle mobile-menu" type="button">
             <i class="bi bi-x fs-5"></i>
