@@ -10,7 +10,7 @@
 		</div>
 	</div>
 
-	<div class="container pb-4">
+	<div class="container pb-5">
 		<div class="before-after" style="--position: 50%;">
 
 			<!-- Before image -->
@@ -60,7 +60,7 @@
 		</div>
 	</div>
 
-	<div class="container pb-5">
+	<div class="container">
 		<div class="row">
 			<div class="col-12 text-center">
 				<a class="btn-white mt-2 d-inline-block" href="/our-work/" target="_blank">View our work</a>

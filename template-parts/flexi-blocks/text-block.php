@@ -1,4 +1,4 @@
-<div class="container-fluid py-4 py-lg-5 <?php the_sub_field('background_colour_text_block'); ?>">
+<div class="container-fluid mb-4 mb-lg-5 <?php the_sub_field('background_colour_text_block'); ?>">
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-lg-8 text-center">

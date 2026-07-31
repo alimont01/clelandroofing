@@ -1,7 +1,7 @@
 <?php
 $service_posts = get_sub_field('choose_and_order_services');
 if( $service_posts ): ?>
-    <div class="container-fluid py-4 py-lg-5">
+    <div class="container-fluid mb-4 mb-lg-5">
 		<div class="container">
 			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 text-blue">
 				<?php foreach( $service_posts as $post ): 

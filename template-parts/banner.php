@@ -77,7 +77,7 @@ if ( empty( $thumb_alt ) ) {
 
 <?php else: ?> 
 
-	<header class="container-fluid position-relative d-flex align-items-center bg-grad text-white">
+	<div class="container-fluid position-relative d-flex align-items-center bg-grad text-white mb-4 mb-lg-5">
 			<div class="container pt-2 pb-4 py-lg-5 z-top">
 				<div class="row justify-content-center">
 					<div class="col-lg-8 pt-5 text-center">
@@ -111,7 +111,7 @@ if ( empty( $thumb_alt ) ) {
 					</div>
 				</div>
 			</div>
-	</header>
+	</div>
 
 <?php endif; ?> 
 
