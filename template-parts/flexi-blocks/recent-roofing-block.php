@@ -1,5 +1,5 @@
-<div class="container-fluid my-3 my-lg-5 bg-blue position-relative remove-p-margin">
-	<div class="container text-white">
+<div class="container-fluid my-3 my-lg-5 pb-5 bg-blue position-relative remove-p-margin">
+	<div class="container text-white z-top">
 		<div class="row justify-content-center py-5">
 			<div class="col-12 col-lg-7 text-center">
 				<h2 class="mt-0 mb-3">
@@ -10,7 +10,7 @@
 		</div>
 	</div>
 
-	<div class="container pb-5">
+	<div class="container pb-5 z-top">
 		<div class="before-after" style="--position: 50%;">
 
 			<!-- Before image -->
@@ -67,6 +67,9 @@
 			</div>
 		</div>
 	</div>
+
+	<img class="w-100 position-absolute start-0 bottom-0" src="<?php echo get_template_directory_uri(); ?>/assets/img/projects-bg.svg" alt="Cleland Roofing Solutions">
+
 </div>
 
 
