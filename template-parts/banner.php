@@ -78,7 +78,7 @@ if ( empty( $thumb_alt ) ) {
 <?php else: ?> 
 
 	<div class="container-fluid position-relative d-flex align-items-center bg-grad mb-4 mb-lg-5 ">
-			<div class="container pt-lg-5 z-top-top hero">
+			<div class="container pt-lg-5 hero">
 				<div class="row mt-5">
 					<div class="col-lg-6 mt-5">
 						<div class="bg-white p-4 text-blue w-100 mb-5">
@@ -115,7 +115,7 @@ if ( empty( $thumb_alt ) ) {
 			</div>
 
 			<div class="position-absolute start-0 left-0 w-100 h-100 z-top bg-grad-hero"></div>
-			<img class="cover-img position-absolute start-0 top-0" src="<?php echo get_template_directory_uri(); ?>/assets/img/footer-bg.svg" alt="overlay graphic">
+			<img class="cover-img position-absolute start-0 top-0 z-top" src="<?php echo get_template_directory_uri(); ?>/assets/img/footer-bg.svg" alt="overlay graphic">
 			<img class="position-absolute top-0 start-0 cover-img" src="<?php echo $thumb['0'];?>" alt="<?php the_title(); ?> - cleland roofing solutions">
 
 		</div>
