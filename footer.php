@@ -62,7 +62,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 text-center pb-4">
-                {get logos} test
+                {get logos}
             </div>
         </div>
         <div class="row">

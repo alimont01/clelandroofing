@@ -1,4 +1,4 @@
-<div class="container mt-3 mt-lg-5 remove-p-margin">
+<div class="container py-4 py-lg-5 remove-p-margin">
 	<div class="row">
 		<div class="col-12">
 			<div class="d-flex flex-wrap align-items-center text-white p-4  position-relative bg-grad">
