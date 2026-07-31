@@ -115,7 +115,7 @@ if ( empty( $thumb_alt ) ) {
 			</div>
 
 			<div class="position-absolute start-0 left-0 w-100 h-100 z-top bg-grad-hero"></div>
-			<img class="cover-img position-absolute start-0 top-0 z-top" src="http://cleland-roofing/wp-content/themes/clelandroofing/assets/img/footer-bg.svg" alt="Footer graphic">
+			<img class="cover-img position-absolute start-0 top-0" src="<?php echo get_template_directory_uri(); ?>/assets/img/footer-bg.svg" alt="overlay graphic">
 			<img class="position-absolute top-0 start-0 cover-img" src="<?php echo $thumb['0'];?>" alt="<?php the_title(); ?> - cleland roofing solutions">
 
 		</div>
