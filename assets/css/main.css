@@ -1,0 +1,428 @@
+
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+h1, h2, h3, h4 {
+  font-weight: 700;
+}
+.fs-5 {
+  font-weight: 600;
+}
+.small, small {
+  font-size: .8em;
+}
+header .main-navigation li {
+  margin-left: 20px;
+}
+header li, 
+footer li {
+    list-style: none;
+    font-size: 0.85rem;
+}
+header a, 
+footer a {
+    text-decoration: none;
+    font-weight: 600;
+}
+.main-navigation a,
+footer a {
+  position: relative;
+}
+
+.main-navigation a::after,
+footer a::after {
+  content: "";
+  border: .5px solid #fff0;
+  position: absolute;
+  width: 0;
+  bottom: -5px;
+  left: 0;
+  transition: all .35s ease;
+}
+
+header .main-navigation .current_page_item a::after,
+header .main-navigation a:hover::after {
+  width: 100%;
+  border-color: #332492;
+}
+
+footer .current_page_item a::after,
+footer a:hover::after {
+  width: 100%;
+  border-color: #fff;
+}
+
+.text-white,
+.text-white a {
+    color: #fff;
+}
+.text-blue,
+.text-blue a {
+    color: #332492;
+}
+.bg-grad {
+    background: #330175;
+    background: linear-gradient(90deg, rgba(51, 1, 117, 1) 0%, rgba(49, 76, 180, 1) 100%);
+}
+.bg-blue {
+    background-color: #332492;
+}
+.bg-purple {
+    background-color: #795CFF;
+}
+.bg-whte {
+    background-color: #fff;
+}
+a {
+    transition: all .35s ease-in-out;
+    text-decoration: none;
+}
+.contact-nav a {
+    background-color: #0975D8;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 35px;
+}
+.btn-blue {
+    background-color: #0975D8;
+    color: #fff;
+    padding: 7px 20px;
+    border-radius: 35px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 2px solid #0975D8;
+}
+.btn-blue:hover {
+    background-color: transparent;
+    color: #0975D8;
+}
+.btn-white,
+.btn-outline:hover {
+    background-color: #fff;
+    color: #332492 !important;
+    padding: 7px 20px;
+    border-radius: 35px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 2px solid #fff;
+}
+.btn-white:hover {
+    border: 2px solid #fff;
+    background-color: transparent;
+    color: #fff !important;
+}
+.btn-outline {
+    border: 2px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    padding: 7px 20px;
+    border-radius: 35px;
+    text-decoration: none;
+    font-weight: 600;
+}
+.z-top-top {
+    z-index: 19;
+    position: relative;
+}
+.z-top {
+    z-index: 9;
+    position: relative;
+}
+.cover-img {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+}
+.before-after {
+  display: block;
+  width: 100% !important;
+  height: 470px !important;
+  object-fit: cover;
+}
+footer ul {
+  padding: 0;
+}
+footer li {
+  margin-bottom: 10px;
+}
+.alizan-logo {
+  width: 100%;
+  max-width: 100px !important;
+}
+img.w-100 {
+  height: auto;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+.hp-hero {
+  min-height: 650px;
+}
+.bottom-0 {
+  bottom: -2px !important;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.services span.pe-3,
+.services img {
+  transition: all .35s ease;
+}
+.services:hover span.pe-3 {
+  padding-right: 0 !important;
+}
+.services:hover img {
+    opacity: 0.7;
+}
+
+
+.before-after {
+	--position: 50%;
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	border: 3px solid #fff;
+	background: #fff;
+}
+
+
+/* After image sits directly over the Before image */
+.before-after__after {
+	position: absolute;
+	inset: 0;
+	clip-path: inset(0 0 0 var(--position));
+}
+
+/* Make sure the image inside the overlay behaves identically */
+.before-after__after .before-after__image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* Centre dividing line */
+.before-after__divider {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: var(--position);
+	width: 4px;
+	background: #fff;
+	transform: translateX(-50%);
+	pointer-events: none;
+}
+
+/* Circular control */
+.before-after__handle {
+	position: absolute;
+	top: 50%;
+	left: var(--position);
+	width: 84px;
+	height: 84px;
+	background: #fff;
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 22px;
+	pointer-events: none;
+	z-index: 2;
+}
+
+/* Arrows */
+.before-after__arrow {
+	width: 18px;
+	height: 18px;
+	border-top: 3px solid #264fc4;
+	border-right: 3px solid #264fc4;
+}
+
+.before-after__arrow--left {
+	transform: rotate(-135deg);
+}
+
+.before-after__arrow--right {
+	transform: rotate(45deg);
+}
+
+/* Before / After labels */
+.before-after__label {
+	position: absolute;
+	bottom: 0;
+	background: #fff;
+	padding: 10px 20px;
+	font-weight: 600;
+	z-index: 3;
+	pointer-events: none;
+}
+
+.before-after__label--before {
+	left: 0;
+}
+
+.before-after__label--after {
+	right: 0;
+}
+
+/*
+ * Invisible range input covering the entire component.
+ * This gives us mouse, keyboard and touch dragging.
+ */
+.before-after__range {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	opacity: 0;
+	cursor: ew-resize;
+	z-index: 4;
+}
+
+/* Slightly smaller handle on mobile */
+@media (max-width: 767.98px) {
+
+	.before-after__handle {
+		width: 60px;
+		height: 60px;
+		gap: 14px;
+	}
+
+	.before-after__arrow {
+		width: 13px;
+		height: 13px;
+		border-width: 2px;
+	}
+
+	.before-after__label {
+		padding: 7px 12px;
+		font-size: 14px;
+	}
+}
+
+
+.mobile-menu {
+	width: 32px;
+	height: 32px;
+}
+/* Mobile menu entry animation only */
+
+#mobile-menu {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    opacity: 1;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-100%);
+    transition:
+        transform 0.75s cubic-bezier(.16, 1, .3, 1),
+        opacity 0.35s ease,
+        visibility 0.35s ease;
+    overflow: hidden;
+}
+body.mobile-menu-open #mobile-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+    transition:
+        transform 0.75s cubic-bezier(.16, 1, .3, 1),
+        opacity 0.35s ease,
+        visibility 0s linear 0s;
+}
+
+/* Open state */
+body.mobile-menu-open #mobile-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+/* Menu item entry state */
+#mobile-menu li {
+    opacity: 0;
+  list-style: none;
+	  margin-bottom: 20px !important;
+    transform: translateY(18px);
+}
+
+/* Staggered boot-up reveal */
+body.mobile-menu-open #mobile-menu li {
+    animation: jimmyMenuItemIn 0.45s ease forwards;
+}
+
+body.mobile-menu-open #mobile-menu li:nth-child(1) { animation-delay: 0.42s; }
+body.mobile-menu-open #mobile-menu li:nth-child(2) { animation-delay: 0.49s; }
+body.mobile-menu-open #mobile-menu li:nth-child(3) { animation-delay: 0.56s; }
+body.mobile-menu-open #mobile-menu li:nth-child(4) { animation-delay: 0.63s; }
+body.mobile-menu-open #mobile-menu li:nth-child(5) { animation-delay: 0.70s; }
+body.mobile-menu-open #mobile-menu li:nth-child(6) { animation-delay: 0.77s; }
+body.mobile-menu-open #mobile-menu li:nth-child(7) { animation-delay: 0.84s; }
+body.mobile-menu-open #mobile-menu li:nth-child(8) { animation-delay: 0.91s; }
+
+@keyframes jimmyMenuItemIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Reduced motion fallback */
+@media (prefers-reduced-motion: reduce) {
+    #mobile-menu,
+    #mobile-menu::after,
+    #mobile-menu li {
+        transition: none;
+        animation: none !important;
+        transform: none;
+    }
+
+    body.mobile-menu-open #mobile-menu {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    body.mobile-menu-open #mobile-menu li {
+        opacity: 1;
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 1399px) {
+}
+
+@media (max-width: 1199px) {
+}
+
+@media (max-width: 991px) {
+}
+
+@media (max-width: 767px) {
+}
+
+@media (max-width: 575px) {
+}
+
+@media (max-width: 440px) {
+}
+
+@media (max-width: 341px) {
+}
