@@ -77,11 +77,11 @@ if ( empty( $thumb_alt ) ) {
 
 <?php else: ?> 
 
-	<div class="container-fluid position-relative d-flex align-items-center bg-grad text-white mb-4 mb-lg-5">
-			<div class="container pt-2 pb-4 py-lg-5 z-top">
+	<div class="container-fluid position-relative d-flex align-items-center bg-grad text-white hp-hero">
+			<div class="container pt-2 pb-4 py-lg-5 z-top-top">
 				<div class="row justify-content-center">
-					<div class="col-lg-8 pt-5 text-center">
-						<h1 class="mt-5 mb-4">
+					<div class="col-lg-8 text-center">
+						<h1 class="mt-0 mb-4">
 							<?php the_title(); ?>
 						</h1>
 						<?php if( get_field('hero_intro_text') ): ?>
@@ -96,7 +96,7 @@ if ( empty( $thumb_alt ) ) {
 								$link_title = $link['title'];
 								$link_target = $link['target'] ? $link['target'] : '_self';
 								?>
-								<a class="btn-white" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+								<a class="btn-white me-md-2" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
 							<?php endif; ?>
 							<?php 
 							$link_secondary = get_field('hero_button_link_secondary');
@@ -105,13 +105,19 @@ if ( empty( $thumb_alt ) ) {
 								$link_title = $link_secondary['title'];
 								$link_target = $link_secondary['target'] ? $link['target'] : '_self';
 								?>
-								<a class="btn-outline" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+								<a class="btn-outline ms-md-2" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
 							<?php endif; ?>
 						</div>
 					</div>
 				</div>
 			</div>
-	</div>
+
+			<img class="position-absolute top-0 start-0 cover-img" src="<?php echo $thumb['0'];?>" alt="<?php the_title(); ?> - cleland roofing solutions">
+			<div class="position-absolute start-0 left-0 w-100 h-100 z-top bg-grad opacity-75"></div>
+
+			<img class="w-100 position-absolute start-0 bottom-0 z-top" src="<?php echo get_template_directory_uri(); ?>/assets/img/banner-mask.svg" alt="hero graphic">
+
+		</div>
 
 <?php endif; ?> 
 
