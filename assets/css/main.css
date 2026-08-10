@@ -79,12 +79,15 @@ footer a:hover::after {
 .bg-whte {
     background-color: #fff;
 }
+.bg-light-grey {
+    background-color: #f4f4f4;
+}
 a {
     transition: all .35s ease-in-out;
     text-decoration: none;
 }
 .contact-nav a {
-    background-color: #0975D8;
+    background-color: #3144ad;
     color: #fff;
     padding: 5px 10px;
     border-radius: 35px;
@@ -94,7 +97,7 @@ a {
 }
 .contact-nav a:hover {
   background-color: #eee;
-  color: #0975D8;
+  color: #3144ad;
 }
 .btn-blue {
     background-color: #0975D8;
@@ -139,6 +142,10 @@ a {
 }
 .z-top {
     z-index: 9;
+    position: relative;
+}
+.z-top-2 {
+    z-index: 12;
     position: relative;
 }
 .cover-img {
@@ -203,26 +210,7 @@ img.w-100 {
 .services:hover img {
     opacity: 0.7;
 }
-.add-arrow {
-	position: relative;
-	display: flex;
-	align-items: center;
-	gap: 12px;
 
-}
-
-.add-arrow::before {
-	content: "";
-	display: inline-block;
-	width: 0;
-	height: 0;
-	border-top: 15px solid transparent;
-	border-bottom: 15px solid transparent;
-	border-left: 15px solid #3e0f7d;
-	flex: 0 0 auto;
-  position: absolute;
-  left: -1.5rem !important;
-}
 
 .before-after {
 	--position: 50%;

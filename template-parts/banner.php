@@ -81,47 +81,12 @@ if ( empty( $thumb_alt ) ) {
 			<div class="container pt-lg-5 hero">
 				<div class="row mt-5">
 
-				<?php if ( has_post_thumbnail() ) : ?>
-					<div class="col-lg-6 mt-5">
-						<div class="bg-white p-4 text-blue w-100 mb-5">
-							<h1 class="mt-0 mb-4 add-arrow">
-								<?php the_title(); ?>
-							</h1>
-							<?php if( get_field('hero_intro_text') ): ?>
-								<p class=""><?php the_field('hero_intro_text'); ?></p>
-							<?php endif; ?>
-
-							<div class="w-100 d-flex flex-wrap">
-								<?php 
-								$link = get_field('hero_button_link');
-								if( $link ): 
-									$link_url = $link['url'];
-									$link_title = $link['title'];
-									$link_target = $link['target'] ? $link['target'] : '_self';
-									?>
-									<a class="btn-white me-md-2" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
-								<?php endif; ?>
-								<?php 
-								$link_secondary = get_field('hero_button_link_secondary');
-								if( $link_secondary ): 
-									$link_url = $link_secondary['url'];
-									$link_title = $link_secondary['title'];
-									$link_target = $link_secondary['target'] ? $link['target'] : '_self';
-									?>
-									<a class="btn-outline ms-md-2" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
-								<?php endif; ?>
-							</div>
-						</div>
-					</div>
-
-					<?php else: ?> 
-
 					<div class="col-lg-6 mt-5 text-white">
-						<h1 class="mt-0 mb-4 add-arrow">
+						<h1 class="my-4">
 							<?php the_title(); ?>
 						</h1>
 						<?php if( get_field('hero_intro_text') ): ?>
-							<p class=""><?php the_field('hero_intro_text'); ?></p>
+							<p class="mb-5"><?php the_field('hero_intro_text'); ?></p>
 						<?php endif; ?>
 
 						<div class="w-100 d-flex flex-wrap">
@@ -145,8 +110,6 @@ if ( empty( $thumb_alt ) ) {
 							<?php endif; ?>
 						</div>
 					</div>
-					<?php endif; ?> 
-
 
 				</div>
 			</div>
