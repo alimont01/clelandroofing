@@ -32,7 +32,7 @@
                             data-caption="<?php echo esc_attr( $image['caption'] ); ?>"
                         >
                             <img
-                                class="w-100"
+                                class="gallery-thumbs"
                                 src="<?php echo esc_url( $image['sizes']['news-post'] ); ?>"
                                 alt="<?php echo esc_attr( $image['alt'] ); ?>"
                             />
