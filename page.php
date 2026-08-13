@@ -23,7 +23,7 @@ get_header();
 			<div class="container text-white mt-5 fadein-content">
 				<div class="row">
 					<div class="col-12 text-center">
-						<p><?php esc_html_e( 'No content found.', 'buzzqube_theme' ); ?></p>
+						<p><?php esc_html_e( 'No content found.', 'Cleland_Theme' ); ?></p>
 					</div>
 				</div>
 			</div>

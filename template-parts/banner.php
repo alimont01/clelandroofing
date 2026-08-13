@@ -13,12 +13,6 @@ if ( empty( $thumb_alt ) ) {
 }
 ?>
 
-    <!-- Link Swiper's CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"
-    />
-
 <?php if ( is_front_page()  ) : ?>
 	<div class="container-fluid position-relative d-flex align-items-center bg-grad text-white hp-hero">
 			<div class="container pt-2 pb-4 py-lg-5 z-top-top">
@@ -56,7 +50,7 @@ if ( empty( $thumb_alt ) ) {
 			</div>
 
 			<!-- Swiper -->
-			<div class="swiper mySwiper position-absolute start-0 top-0">
+			<div class="swiper hpSwiper position-absolute start-0 top-0">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
 						<img src="https://clelandroofingsolutions.co.uk/wp-content/uploads/2024/05/Cleland-Roofing-1-Keydrone-Web.jpg" />
@@ -78,7 +72,11 @@ if ( empty( $thumb_alt ) ) {
 <?php else: ?> 
 
 	<div class="container-fluid position-relative d-flex align-items-center bg-grad mb-4 mb-lg-5 ">
-			<div class="container pt-lg-5 hero">
+			<div class="container pt-lg-5 hero 
+			<?php if ( has_post_thumbnail() ) : ?>
+				hero-min-hight
+			<?php endif; ?> 
+			">
 				<div class="row mt-5">
 
 					<div class="col-lg-6 mt-5 text-white">
@@ -126,17 +124,14 @@ if ( empty( $thumb_alt ) ) {
 <?php endif; ?> 
 
 
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
-
 <!-- Initialize Swiper -->
 <script>
-	var swiper = new Swiper('.mySwiper', {
-	spaceBetween: 30,
+	var swiper = new Swiper('.hpSwiper', {
+	spaceBetween: 0,
 	effect: 'fade',
 	loop: true,
 	autoplay: {
-          delay: 4500,
+          delay: 3000,
           disableOnInteraction: false,
         },
 	});

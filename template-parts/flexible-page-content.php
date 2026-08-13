@@ -25,6 +25,10 @@ if ( is_home() && ! is_front_page() ) {
 			<?php get_template_part( 'template-parts/flexi-blocks/trust-banner' ); ?>
 		<?php elseif ( get_row_layout() == 'recent_roofing_projects' ) : ?>
 			<?php get_template_part( 'template-parts/flexi-blocks/recent-roofing-block' ); ?>
+		<?php elseif ( get_row_layout() == 'full_width_image' ) : ?>
+			<?php get_template_part( 'template-parts/flexi-blocks/image-full-width' ); ?>
+		<?php elseif ( get_row_layout() == 'image_gallery' ) : ?>
+			<?php get_template_part( 'template-parts/flexi-blocks/image-gallery' ); ?>
 		<?php endif; ?>
 	<?php endwhile; ?>
 <?php endif; ?>

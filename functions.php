@@ -53,6 +53,17 @@ function Cleland_Theme_enqueue_assets() {
     $main_css_version
   );
 
+  wp_enqueue_style(
+    'Swiper-css',
+    'https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css'
+  );
+
+
+  wp_enqueue_script(
+    'Swiper-JS',
+    'https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js'
+  );
+
   if ( file_exists( $theme_dir . '/assets/js/bootstrap.bundle.min.js' ) ) {
     wp_enqueue_script(
       'Cleland_Theme-bootstrap',
@@ -76,6 +87,14 @@ function Cleland_Theme_enqueue_assets() {
 		'bootstrap-icons',
 		'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css'
 	);
+
+  wp_enqueue_script(
+        'gallery-modal',
+        get_stylesheet_directory_uri() . '/assets/js/gallery-modal.js',
+        array(),
+        null,
+        true
+    );
 }
 add_action( 'wp_enqueue_scripts', 'Cleland_Theme_enqueue_assets' );
 
@@ -354,3 +373,5 @@ function amb_register_services_cpt() {
     register_post_type( 'service', $args );
 }
 add_action( 'init', 'amb_register_services_cpt' );
+
+

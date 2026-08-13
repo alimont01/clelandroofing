@@ -49,8 +49,19 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-12 text-center">
-                <p class="fw-bold">0131 364 4212  &nbsp;&nbsp;&nbsp;   <a href="mailto:enquiries@clelandroofingsolutions.co.uk">enquiries@clelandroofingsolutions.co.uk</a></p>
+            <div class="col-12 d-flex flex-wrap justify-content-center">
+                <?php if( get_field('phone_no', 'option') ): ?>
+                    <p class="fw-bold mx-4 mb-2">
+                        <?php the_field('phone_no', 'option'); ?>
+                    </p>
+                <?php endif; ?>
+                <?php if( get_field('email', 'option') ): ?>
+                    <p class="fw-bold"> 
+                        <a href="mailto:<?php the_field('email', 'option'); ?>">
+                            <?php the_field('email', 'option'); ?>
+                        </a>
+                    </p>
+                <?php endif; ?>
             </div>
         </div>
     </div>
@@ -60,21 +71,33 @@
 
 <div class="container-fluid py-3 py-lg-5">
     <div class="container">
-        <div class="row">
-            <div class="col-12 text-center pb-4">
-                {get logos}
+        <?php if( have_rows('footer_logos', 'option') ): ?>
+            <div class="row">
+                <div class="col-12 pb-lg-4 d-flex flex-wrap align-items-center justify-content-center gap-3 gap-lg-5">
+                    <?php while( have_rows('footer_logos', 'option') ): the_row(); 
+                        $logos = get_sub_field('add_logo');
+                        ?>
+                        <?php if( get_sub_field('add_logo_url', 'option') ): ?>
+                            <a href="<?php echo acf_esc_html( get_sub_field('add_logo_url', 'option') ); ?>" target="_blank">
+                        <?php endif; ?>
+                            <?php echo wp_get_attachment_image( $logos, 'full', "", ["class" => "footer-logos"] ); ?>
+                        <?php if( get_sub_field('add_logo_url', 'option') ): ?>
+                            </a>
+                        <?php endif; ?>
+                    <?php endwhile; ?>
+                </div>
             </div>
-        </div>
+        <?php endif; ?>
         <div class="row">
             <div class="col-12">
                 <hr class="border-top border-dark py-2">
             </div>
         </div>
         <div class="row">
-            <div class="col-9 mb-3 mb-lg-0">
+            <div class="col-md-9 mb-3 mb-lg-0">
                 <p class="small mb-2">&copy; <?php echo esc_html( date_i18n( 'Y' ) ); ?> <?php bloginfo( 'name' ); ?> - Companies House Registration No. SC670470 - VAT Registered 359 8055 58</p>
             </div>
-            <div class="col-3 text-end">
+            <div class="col-md-3 text-md-end">
                 <a href="https://alizan.uk/" target="_blank">
                     <img class="alizan-logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/alizan-logo-black.svg" alt="Alizan Logo">
                 </a>
