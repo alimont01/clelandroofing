@@ -172,7 +172,7 @@
                     "max_size": "",
                     "mime_types": "",
                     "allow_in_bindings": 0,
-                    "preview_size": "medium",
+                    "preview_size": "thumbnail",
                     "parent_repeater": "field_6a7d7d0ae3fe4"
                 },
                 {
@@ -218,5 +218,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1786609992
+    "modified": 1786617290
 }
