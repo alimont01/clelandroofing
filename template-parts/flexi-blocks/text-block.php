@@ -5,7 +5,7 @@
 <?php endif; ?>
 
 ">
-	<div class="container">
+	<div class="container text-content">
 		<div class="row justify-content-center">
 			<div class="col-lg-8 
 			<?php if( get_sub_field('center_text_text_block') ): ?>
