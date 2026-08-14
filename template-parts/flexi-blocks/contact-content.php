@@ -31,7 +31,7 @@
 						<?php echo do_shortcode('[forminator_form id="146"]'); ?>
 						<?php echo do_shortcode('[forminator_form id="132"]'); ?>
 					</div>
-					<img class="cover-img position-absolute start-0 top-0" src="http://cleland-roofing/wp-content/themes/clelandroofing/assets/img/call-to-action-bg.svg" alt="Call to action graphic">
+					<img class="cover-img position-absolute start-0 top-0" src="<?php echo get_template_directory_uri(); ?>/assets/img/call-to-action-bg.svg" alt="Call to action graphic">
 				</div>
 			</div>
 		</div>
