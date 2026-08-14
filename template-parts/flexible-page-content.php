@@ -29,6 +29,8 @@ if ( is_home() && ! is_front_page() ) {
 			<?php get_template_part( 'template-parts/flexi-blocks/image-full-width' ); ?>
 		<?php elseif ( get_row_layout() == 'image_gallery' ) : ?>
 			<?php get_template_part( 'template-parts/flexi-blocks/image-gallery' ); ?>
+		<?php elseif ( get_row_layout() == 'show_contact_details' ) : ?>
+			<?php get_template_part( 'template-parts/flexi-blocks/contact-content' ); ?>
 		<?php endif; ?>
 	<?php endwhile; ?>
 <?php endif; ?>

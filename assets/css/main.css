@@ -476,6 +476,12 @@ body.mobile-menu-open #mobile-menu li:nth-child(8) { animation-delay: 0.91s; }
     max-height: 90px;
     object-fit: contain;
 }
+.forminator-ui input,
+.forminator-ui .forminator-select,
+.forminator-ui .forminator-field-textarea textarea {
+  background-color: #fff;
+  border-color: #fff !important;
+}
 
 /* Responsive styles */
 @media (max-width: 1399px) {

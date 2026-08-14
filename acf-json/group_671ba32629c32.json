@@ -7,7 +7,7 @@
             "label": "Address",
             "name": "address",
             "aria-label": "",
-            "type": "textarea",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -17,11 +17,11 @@
                 "id": ""
             },
             "default_value": "",
-            "maxlength": "",
             "allow_in_bindings": 0,
-            "rows": 6,
-            "placeholder": "",
-            "new_lines": "br"
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
         },
         {
             "key": "field_671ba35976230",
@@ -218,5 +218,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1786617290
+    "modified": 1786716792
 }
