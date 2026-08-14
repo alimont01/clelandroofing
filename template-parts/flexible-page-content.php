@@ -31,6 +31,8 @@ if ( is_home() && ! is_front_page() ) {
 			<?php get_template_part( 'template-parts/flexi-blocks/image-gallery' ); ?>
 		<?php elseif ( get_row_layout() == 'show_contact_details' ) : ?>
 			<?php get_template_part( 'template-parts/flexi-blocks/contact-content' ); ?>
+		<?php elseif ( get_row_layout() == 'show_careers_content' ) : ?>
+			<?php get_template_part( 'template-parts/flexi-blocks/careers-content' ); ?>
 		<?php endif; ?>
 	<?php endwhile; ?>
 <?php endif; ?>

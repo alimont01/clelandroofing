@@ -554,6 +554,15 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_6a7f37938191c": {
+                    "key": "layout_6a7f37938191c",
+                    "name": "show_careers_content",
+                    "label": "Show Careers content",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_6a6b6b1076655": {
                     "key": "layout_6a6b6b1076655",
                     "name": "recent_roofing_projects",
@@ -734,5 +743,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1786717078
+    "modified": 1786722230
 }
