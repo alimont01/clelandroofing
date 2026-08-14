@@ -11,7 +11,7 @@
 			<div class="col-lg-8 ps-lg-5">
 				<div class="bg-grad p-4 p-lg-5 text-white position-relative">
 					<div class="z-top">
-						<?php echo do_shortcode('[forminator_form id="132"]'); ?>
+						<?php echo do_shortcode('[forminator_form id="136"]'); ?>
 					</div>
 					<img class="cover-img position-absolute start-0 top-0" src="<?php echo get_template_directory_uri(); ?>/assets/img/call-to-action-bg.svg" alt="Call to action graphic">
 				</div>
