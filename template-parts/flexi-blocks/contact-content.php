@@ -29,6 +29,7 @@
 				<div class="bg-grad p-4 p-lg-5 text-white position-relative">
 					<div class="z-top">
 						<?php echo do_shortcode('[forminator_form id="146"]'); ?>
+						<?php echo do_shortcode('[forminator_form id="132"]'); ?>
 					</div>
 					<img class="cover-img position-absolute start-0 top-0" src="http://cleland-roofing/wp-content/themes/clelandroofing/assets/img/call-to-action-bg.svg" alt="Call to action graphic">
 				</div>
