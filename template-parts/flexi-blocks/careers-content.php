@@ -43,8 +43,6 @@
 						<strong>Interested?</strong> Complete the application form below and upload your CV.
 					</p>
 
-					<a class="btn-blue mt-2 d-inline-block" href="#">Apply for this Position</a>
-
 			</div>
 		</div>
 	</div>
