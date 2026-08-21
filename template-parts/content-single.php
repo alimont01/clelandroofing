@@ -13,31 +13,19 @@ $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' )
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<?php get_template_part( 'template-parts/banner' ); ?>
+	<?php get_template_part( 'template-parts/flexible-page-content' ); ?>
 
-			<div class="d-none container-fluid position-relative mb-4 mb-lg-5 bg-grad text-white">
-				<div class="container position-relative pt-lg-5 z-top-2">
-					<div class="row hero align-items-center">
-						<div class="col-lg-6 my-4">
-							<h1 class="">
-								<?php the_title(); ?>
-							</h1>
-						</div>
-						<?php if ( has_post_thumbnail() ) : ?>
-							<div class="col-lg-6 d-lg-none">
-								<img class="cover-img mt-5" src="<?php echo $thumb['0'];?>" alt="<?php the_title(); ?>">
-							</div>
-						<?php endif; ?> 
+	<?php if ( '' !== get_post()->post_content ) : ?>
+		<div class="ps-0 ps-lg-3 ps-xl-5 pe-0 pe-lg-3 pe-xl-5">
+			<div class="container mb-lg-3 mb-xl-5 content">
+				<div class="row">
+					<div class="col-12">
+						<?php the_content();?>
 					</div>
 				</div>
-				<?php if ( has_post_thumbnail() ) : ?>
-					<div class="d-none d-lg-block w-50 h-100 position-absolute end-0 top-0">
-						<img class="cover-img" src="<?php echo $thumb['0'];?>" alt="<?php the_title(); ?>">
-					</div>
-				<?php endif; ?> 
-				<img class="cover-img position-absolute start-0 top-0 z-top" src="<?php echo get_template_directory_uri(); ?>/assets/img/footer-bg.svg" alt="overlay graphic">
 			</div>
-
-			<?php get_template_part( 'template-parts/flexible-page-content' ); ?>
+		</div>
+	<?php endif; ?>
 
 	</article><!-- #post-<?php the_ID(); ?> -->
 </main>
