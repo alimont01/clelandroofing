@@ -1,4 +1,4 @@
-<div class="container mb-4">
+<div class="container mb-4 remove-p-margin">
 	<div class="row">
 		<div class="col-12">
 			<div class="bg-light-grey d-flex flex-wrap">
@@ -20,7 +20,7 @@
 						<p><?php the_sub_field('bio'); ?></p>
 					<?php endif; ?>
 				</div>
-		</div>
+			</div>
 		</div>
 	</div>
 </div>
