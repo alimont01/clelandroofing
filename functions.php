@@ -12,6 +12,8 @@ function Cleland_Theme_setup() {
   add_theme_support( 'title-tag' );
   add_theme_support( 'post-thumbnails' );
   add_image_size( 'news-post', 680, 420,  array( 'center', 'center' ) );
+  add_image_size( 'square', 680, 680,  array( 'center', 'center' ) );
+
   register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'Cleland_Theme' ),
 		'footer_1'  => __( 'Footer Menu 1', 'Cleland_Theme' ),

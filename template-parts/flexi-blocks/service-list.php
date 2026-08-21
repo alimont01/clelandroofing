@@ -9,7 +9,7 @@ if( $service_posts ): ?>
 			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 text-blue">
 				<?php foreach( $service_posts as $post ): 
 					setup_postdata($post); 
-					$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'news-post' );
+					$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'square' );
 					?>
 					<div class="col mb-4 services">
 						<a href="<?php the_permalink(); ?>">
@@ -19,7 +19,7 @@ if( $service_posts ): ?>
 								<a href="<?php the_permalink(); ?>">
 									<?php 
 									$image = get_field('placeholder_image', 'option');
-									$size = 'news-post';
+									$size = 'square';
 									if( $image ) {
 										echo wp_get_attachment_image( $image, $size, "",array('class' => 'w-100') );
 									} ?>
