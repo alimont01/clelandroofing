@@ -376,7 +376,7 @@ add_action( 'init', 'amb_register_services_cpt' );
 
 
 /**
- * Register Projects Custom Post Type
+ * Register Work Projects Custom Post Type
  */
 function cleland_register_projects_cpt() {
 
@@ -413,7 +413,7 @@ function cleland_register_projects_cpt() {
 			'with_front' => false,
 		),
 		'capability_type'     => 'post',
-		'has_archive'         => true,
+		'has_archive'         => false,
 		'hierarchical'        => false,
 		'menu_position'       => 20,
 		'menu_icon'           => 'dashicons-admin-home',

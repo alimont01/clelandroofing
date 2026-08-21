@@ -71,7 +71,13 @@ if ( empty( $thumb_alt ) ) {
 
 <?php else: ?> 
 
-	<div class="container-fluid position-relative d-flex align-items-center bg-grad mb-4 mb-lg-5 ">
+	<div class="container-fluid position-relative d-flex align-items-center bg-grad 
+			<?php if (  is_page( 'our-work' )) : ?>
+				mb-0 
+			<?php else: ?> 
+				mb-4 mb-lg-5 
+			<?php endif; ?> 
+			">
 			<div class="container pt-lg-5 hero 
 			<?php if ( has_post_thumbnail() ) : ?>
 				hero-min-hight

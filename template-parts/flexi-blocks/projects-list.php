@@ -1,39 +1,39 @@
-<div class="container-fluid bg-light-grey">
+<div class="container-fluid bg-light-grey mb-4 mb-lg-5">
   <div class="container py-3">
     <div class="row">
       <div class="col-12">
 
-        <div class="project-services d-flex flex-wrap align-items-center gap-2">
+        <div class="project-types d-flex flex-wrap align-items-center gap-2">
 
           <span class="me-2">
-            Filter by service:
+            Filter by project type:
           </span>
 
           <a
-            href="<?php echo esc_url( get_post_type_archive_link( 'project' ) ); ?>"
-            class="btn btn-sm <?php echo is_post_type_archive( 'project' ) ? 'btn-dark' : 'btn-outline-dark'; ?>"
+            href="<?php echo esc_url( get_permalink( get_page_by_path( 'our-work' ) ) ); ?>"
+            class="btn btn-sm <?php echo is_page( 'our-work' ) ? 'btn-dark' : 'btn-outline-dark'; ?>"
           >
             All
           </a>
 
           <?php
-          $services = get_terms( array(
-            'taxonomy'   => 'project_service',
+          $project_types = get_terms( array(
+            'taxonomy'   => 'project_type',
             'hide_empty' => true,
           ) );
 
-          if ( ! is_wp_error( $services ) ) :
+          if ( ! is_wp_error( $project_types ) ) :
 
-            foreach ( $services as $service ) :
+            foreach ( $project_types as $project_type ) :
 
-              $is_active = is_tax( 'project_service', $service->term_id );
+              $is_active = is_tax( 'project_type', $project_type->term_id );
               ?>
 
               <a
-                href="<?php echo esc_url( get_term_link( $service ) ); ?>"
+                href="<?php echo esc_url( get_term_link( $project_type ) ); ?>"
                 class="btn btn-sm <?php echo $is_active ? 'btn-dark' : 'btn-outline-dark'; ?>"
               >
-                <?php echo esc_html( $service->name ); ?>
+                <?php echo esc_html( $project_type->name ); ?>
               </a>
 
             <?php endforeach; ?>
@@ -79,11 +79,20 @@ if( $projects_posts ): ?>
 									<i class="bi bi-arrow-right"></i>
 								</span>
 							</h2>
-							<?php if( get_field('location') ): ?>
-								<p class="mb-2"><strong>Location:</strong> <?php the_field('location'); ?></p>
-							<?php endif; ?>
 							<?php if( get_field('service_type') ): ?>
-								<p class="mb-2"><strong>Service Type:</strong> <?php the_field('service_type'); ?></p>
+								<p class="mb-1"><strong>Service Type:</strong> <?php the_field('service_type'); ?></p>
+							<?php endif; ?>
+							<?php
+							$project_types = get_the_terms( get_the_ID(), 'project_type' );
+
+							if ( $project_types && ! is_wp_error( $project_types ) ) : ?>
+								<p class="mb-1">
+									<strong>Project Type:</strong>
+									<?php echo esc_html( $project_types[0]->name ); ?>
+								</p>
+							<?php endif; ?>
+							<?php if( get_field('location') ): ?>
+								<p class="mb-0"><strong>Location:</strong> <?php the_field('location'); ?></p>
 							<?php endif; ?>
 						</a>
 
