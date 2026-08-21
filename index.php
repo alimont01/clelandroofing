@@ -57,7 +57,7 @@ get_header();
     <?php get_template_part( 'template-parts/project-filters' ); ?>
 
       
-    <div class="container-fluid">
+    <div class="container-fluid text-blue">
         <div class="container">
           <div class="row g-4">
 

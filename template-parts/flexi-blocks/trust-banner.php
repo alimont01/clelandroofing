@@ -1,8 +1,8 @@
 <div class="container remove-p-margin">
 	<div class="row">
 		<div class="col-12">
-			<div class="d-flex flex-wrap align-items-center text-white p-4  position-relative bg-grad">
-				<div class="col-12 col-lg-6 col-xl-9 d-flex flex-wrap align-items-center z-top">
+			<div class="d-flex flex-wrap align-items-center text-white p-4  position-relative bg-grad overflow-hidden">
+				<div class="col-12 col-xl-9 d-flex flex-wrap align-items-center z-top">
 					<div class="">
 						<h2 class="mt-0 mb-3">
 							Trusted by Customers Across Scotland
@@ -10,7 +10,7 @@
 						<span class="mb-3">
 							<p>Read customer reviews, view Cleland Roofing Solutions’ trusted trader profiles, or leave your own feedback.</p>
 						</span>
-						<div class="d-flex">
+						<div class="d-flex flex-wrap">
 							<a class="btn-white mt-2 me-2 d-inline-block" href="#" target="_blank">Google Reviews <i class="bi bi-box-arrow-up-right ms-2"></i></a>
 							<a class="btn-white mt-2 me-2 d-inline-block" href="#" target="_blank">Edinburgh Trusted Trader <i class="bi bi-box-arrow-up-right ms-2"></i></a>
 							<a class="btn-white mt-2 d-inline-block" href="#" target="_blank">East Lothian Trusted Trader <i class="bi bi-box-arrow-up-right ms-2"></i></a>

@@ -101,12 +101,23 @@ a {
     padding: 5px 10px;
     border-radius: 35px;
 }
-.contact-nav a:after {
-  border-color: #fff !important;
+.contact-nav-white a {
+    background-color: #fff;
+    color: #3144ad;
+    padding: 7px 19px;
+    border-radius: 35px;
+}
+.contact-nav a:after,
+.contact-nav-white a:after {
+  border-color: transparent !important;
 }
 .contact-nav a:hover {
   background-color: #eee;
   color: #3144ad;
+}
+.contact-nav-white a:hover {
+  background-color: #3144ad;
+  color: #fff;
 }
 .btn-blue {
     background-color: #0975D8;
@@ -144,6 +155,10 @@ a {
     border-radius: 35px;
     text-decoration: none;
     font-weight: 600;
+}
+header button,
+#mobile-menu button {
+  border: 0;
 }
 .z-top-top {
     z-index: 19;

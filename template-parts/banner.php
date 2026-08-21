@@ -14,7 +14,7 @@ if ( empty( $thumb_alt ) ) {
 ?>
 
 <?php if ( is_front_page()  ) : ?>
-	<div class="container-fluid position-relative d-flex align-items-center bg-grad text-white hp-hero">
+	<div class="container-fluid position-relative d-flex align-items-center mb-4 mb-lg-2 bg-grad text-white hp-hero">
 			<div class="container pt-2 pb-4 py-lg-5 z-top-top">
 				<div class="row justify-content-center">
 					<div class="col-lg-8 text-center">
@@ -33,7 +33,7 @@ if ( empty( $thumb_alt ) ) {
 								$link_title = $link['title'];
 								$link_target = $link['target'] ? $link['target'] : '_self';
 								?>
-								<a class="btn-white me-md-2" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+								<a class="btn-white mx-2 mb-3" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
 							<?php endif; ?>
 							<?php 
 							$link_secondary = get_field('hero_button_link_secondary');
@@ -42,7 +42,7 @@ if ( empty( $thumb_alt ) ) {
 								$link_title = $link_secondary['title'];
 								$link_target = $link_secondary['target'] ? $link['target'] : '_self';
 								?>
-								<a class="btn-outline ms-md-2" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+								<a class="btn-outline mx-2 mb-3" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
 							<?php endif; ?>
 						</div>
 					</div>
@@ -78,7 +78,7 @@ if ( empty( $thumb_alt ) ) {
 				mb-4 mb-lg-5 
 			<?php endif; ?> 
 			">
-			<div class="container pt-lg-5 hero 
+			<div class="container pt-lg-5 hero pb-5
 			<?php if ( has_post_thumbnail() ) : ?>
 				hero-min-hight
 			<?php endif; ?> 

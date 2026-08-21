@@ -44,7 +44,7 @@
     </div>
 </header>
 
-<div id="mobile-menu" class="w-100 p-4 bg-white">
+<div id="mobile-menu" class="w-100 bg-grad p-4 text-white overflow-hidden">
     <div class="w-100 d-flex justify-content-end pt-2 z-top">
         <button class="mobile-menu-close text-center rounded-circle mobile-menu" type="button">
             <i class="bi bi-x fs-5"></i>
@@ -52,11 +52,12 @@
     </div>
     <?php
     wp_nav_menu( array(
-        'theme_location' => 'footer_1',
+        'theme_location' => 'mobile',
         'menu_id'        => 'mobile-menu-items',
-        'menu_class'     => 'mt-5 ps-0 d-flex flex-column align-items-center',
+        'menu_class'     => 'mt-5 ps-0 d-flex flex-column align-items-center fw-bold',
         'container'      => 'nav',
         'container_class'=> 'mobile-navigation z-top',
     ) );
     ?>
+    <img class="cover-img position-absolute start-0 top-0" src="<?php echo get_template_directory_uri(); ?>/assets/img/call-to-action-bg.svg" alt="Call to action graphic">
 </div>

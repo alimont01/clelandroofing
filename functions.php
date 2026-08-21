@@ -16,6 +16,7 @@ function Cleland_Theme_setup() {
 		'primary' => __( 'Primary Menu', 'Cleland_Theme' ),
 		'footer_1'  => __( 'Footer Menu 1', 'Cleland_Theme' ),
 		'footer_2'  => __( 'Footer Menu 2', 'Cleland_Theme' ),
+		'mobile'  => __( 'Mobile Menu ', 'Cleland_Theme' ),
 	) );
 }
 add_action( 'after_setup_theme', 'Cleland_Theme_setup' );
