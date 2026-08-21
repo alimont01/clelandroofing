@@ -43,11 +43,32 @@ $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' )
 						<?php if( get_field('location') ): ?>
 							<p class="mb-2"><strong>Location:</strong> <?php the_field('location'); ?></p>
 						<?php endif; ?>
-						<?php if( get_field('service_type') ): ?>
-							<p class="mb-2"><strong>Service:</strong> <?php the_field('service_type'); ?></p>
+						<?php
+						$service_posts = get_field('service_type');
+						if( $service_posts ): ?>
+							<?php foreach( $service_posts as $post ): setup_postdata($post); ?>
+								<p class="mb-2"><strong>Service:</strong> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> </p>
+							<?php endforeach; ?>
+							<?php wp_reset_postdata(); ?>
+						<?php endif; ?>
+						<?php
+						$project_types = get_the_terms( get_the_ID(), 'project_type' );
+
+						if ( $project_types && ! is_wp_error( $project_types ) ) :
+
+							$project_type = $project_types[0];
+							?>
+
+							<p class="mb-3">
+								<strong>Project Type:</strong>
+								<a href="<?php echo esc_url( get_term_link( $project_type ) ); ?>">
+									<?php echo esc_html( $project_type->name ); ?>
+								</a>
+							</p>
+
 						<?php endif; ?>
 						<?php if( get_field('short_description') ): ?>
-							<p class="mb-2"><?php the_field('short_description'); ?></p>
+							<p class="mb-0"><?php the_field('short_description'); ?></p>
 						<?php endif; ?>
 					</div>
 				</div>

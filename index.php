@@ -57,7 +57,7 @@ get_header();
     <?php get_template_part( 'template-parts/project-filters' ); ?>
 
       
-    <div class="container-fluid py-5 blogs">
+    <div class="container-fluid">
         <div class="container">
           <div class="row g-4">
 
@@ -84,20 +84,25 @@ get_header();
                           <i class="bi bi-arrow-right"></i>
                         </span>
                       </h2>
-                      <?php if( get_field('service_type') ): ?>
-                        <p class="mb-1"><strong>Service:</strong> <?php the_field('service_type'); ?></p>
-                      <?php endif; ?>
                       <?php
-                      $project_types = get_the_terms( get_the_ID(), 'project_type' );
+                      $service_posts = get_field( 'service_type' );
 
-                      if ( $project_types && ! is_wp_error( $project_types ) ) : ?>
-                        <p class="mb-1">
-                          <strong>Project Type:</strong>
-                          <?php echo esc_html( $project_types[0]->name ); ?>
-                        </p>
+                      if ( $service_posts ) : ?>
+                        
+                        <?php foreach ( $service_posts as $service_post ) : ?>
+                          <p class="mb-2">
+                            <strong>Service:</strong>
+                            <?php echo esc_html( get_the_title( $service_post ) ); ?>
+                          </p>
+                        <?php endforeach; ?>
+
                       <?php endif; ?>
-                      <?php if( get_field('location') ): ?>
-                        <p class="mb-0"><strong>Location:</strong> <?php the_field('location'); ?></p>
+
+                      <?php if ( get_field( 'location' ) ) : ?>
+                        <p class="mb-0">
+                          <strong>Location:</strong>
+                          <?php the_field( 'location' ); ?>
+                        </p>
                       <?php endif; ?>
                     </a>
 
