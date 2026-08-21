@@ -33,6 +33,8 @@ if ( is_home() && ! is_front_page() ) {
 			<?php get_template_part( 'template-parts/flexi-blocks/contact-content' ); ?>
 		<?php elseif ( get_row_layout() == 'show_careers_content' ) : ?>
 			<?php get_template_part( 'template-parts/flexi-blocks/careers-content' ); ?>
+		<?php elseif ( get_row_layout() == 'work_projects_block' ) : ?>
+			<?php get_template_part( 'template-parts/flexi-blocks/projects-list' ); ?>
 		<?php endif; ?>
 	<?php endwhile; ?>
 <?php endif; ?>

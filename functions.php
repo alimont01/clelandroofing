@@ -375,3 +375,95 @@ function amb_register_services_cpt() {
 add_action( 'init', 'amb_register_services_cpt' );
 
 
+/**
+ * Register Projects Custom Post Type
+ */
+function cleland_register_projects_cpt() {
+
+	$labels = array(
+		'name'                  => 'Projects',
+		'singular_name'         => 'Project',
+		'menu_name'             => 'Our Work',
+		'name_admin_bar'        => 'Project',
+		'add_new'               => 'Add New',
+		'add_new_item'          => 'Add New Project',
+		'new_item'              => 'New Project',
+		'edit_item'             => 'Edit Project',
+		'view_item'             => 'View Project',
+		'all_items'             => 'All Projects',
+		'search_items'          => 'Search Projects',
+		'not_found'             => 'No projects found.',
+		'not_found_in_trash'    => 'No projects found in Trash.',
+		'featured_image'        => 'Featured Image',
+		'set_featured_image'    => 'Set featured image',
+		'remove_featured_image' => 'Remove featured image',
+		'use_featured_image'    => 'Use as featured image',
+	);
+
+	$args = array(
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'show_in_rest'       => true,
+		'query_var'          => true,
+		'rewrite'            => array(
+			'slug'       => 'our-work',
+			'with_front' => false,
+		),
+		'capability_type'     => 'post',
+		'has_archive'         => true,
+		'hierarchical'        => false,
+		'menu_position'       => 20,
+		'menu_icon'           => 'dashicons-admin-home',
+		'supports'            => array(
+			'title',
+			'thumbnail',
+		),
+	);
+
+	register_post_type( 'project', $args );
+}
+add_action( 'init', 'cleland_register_projects_cpt' );
+
+/**
+ * Register Project Type taxonomy
+ */
+function cleland_register_project_type_taxonomy() {
+
+	$labels = array(
+		'name'              => 'Project Types',
+		'singular_name'     => 'Project Type',
+		'search_items'      => 'Search Project Types',
+		'all_items'         => 'All Project Types',
+		'parent_item'       => 'Parent Project Type',
+		'parent_item_colon' => 'Parent Project Type:',
+		'edit_item'         => 'Edit Project Type',
+		'update_item'       => 'Update Project Type',
+		'add_new_item'      => 'Add New Project Type',
+		'new_item_name'     => 'New Project Type Name',
+		'menu_name'         => 'Project Types',
+	);
+
+	$args = array(
+		'labels'            => $labels,
+		'hierarchical'      => true,
+		'public'            => true,
+		'show_ui'           => true,
+		'show_admin_column' => true,
+		'show_in_rest'      => true,
+		'query_var'         => true,
+		'rewrite'           => array(
+			'slug' => 'project-type',
+		),
+	);
+
+	register_taxonomy(
+		'project_type',
+		array( 'project' ),
+		$args
+	);
+
+}
+add_action( 'init', 'cleland_register_project_type_taxonomy' );

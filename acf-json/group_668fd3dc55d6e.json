@@ -161,6 +161,48 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_6a880cf3527ad": {
+                    "key": "layout_6a880cf3527ad",
+                    "name": "work_projects_block",
+                    "label": "Work Projects block",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6a880cf3527b2",
+                            "label": "Choose and order Projects",
+                            "name": "choose_and_order_projects",
+                            "aria-label": "",
+                            "type": "relationship",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "project"
+                            ],
+                            "post_status": [
+                                "publish"
+                            ],
+                            "taxonomy": "",
+                            "filters": [
+                                "search"
+                            ],
+                            "return_format": "object",
+                            "min": "",
+                            "max": "",
+                            "allow_in_bindings": 0,
+                            "elements": "",
+                            "bidirectional": 0,
+                            "bidirectional_target": []
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_66c36120ee8ea": {
                     "key": "layout_66c36120ee8ea",
                     "name": "call_to_action_block",
@@ -729,6 +771,13 @@
                 "operator": "==",
                 "value": "service"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "project"
+            }
         ]
     ],
     "menu_order": 0,
@@ -743,5 +792,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1786722230
+    "modified": 1787301162
 }
