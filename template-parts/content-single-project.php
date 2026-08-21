@@ -44,7 +44,7 @@ $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' )
 							<p class="mb-2"><strong>Location:</strong> <?php the_field('location'); ?></p>
 						<?php endif; ?>
 						<?php if( get_field('service_type') ): ?>
-							<p class="mb-2"><strong>Service Type:</strong> <?php the_field('service_type'); ?></p>
+							<p class="mb-2"><strong>Service:</strong> <?php the_field('service_type'); ?></p>
 						<?php endif; ?>
 						<?php if( get_field('short_description') ): ?>
 							<p class="mb-2"><?php the_field('short_description'); ?></p>
