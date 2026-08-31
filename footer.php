@@ -55,13 +55,39 @@
                         <?php the_field('phone_no', 'option'); ?>
                     </p>
                 <?php endif; ?>
-                <?php if( get_field('email', 'option') ): ?>
-                    <p class="fw-bold"> 
-                        <a href="mailto:<?php the_field('email', 'option'); ?>">
-                            <?php the_field('email', 'option'); ?>
-                        </a>
-                    </p>
-                <?php endif; ?>
+                
+                <?php
+				$email   = get_field('email', 'option');
+				$subject = get_field('contact_email_subject', 'option');
+				$body    = get_field('contact_email_body', 'option');
+
+				if ( $email ) :
+
+					$mailto = 'mailto:' . $email;
+
+					$params = array();
+
+					if ( $subject ) {
+						$params[] = 'subject=' . rawurlencode( $subject );
+					}
+
+					if ( $body ) {
+						$params[] = 'body=' . rawurlencode( $body );
+					}
+
+					if ( $params ) {
+						$mailto .= '?' . implode( '&', $params );
+					}
+				?>
+
+					<p class="fw-bold">
+						<a href="<?php echo esc_attr( $mailto ); ?>">
+							<?php echo esc_html( $email ); ?>
+						</a>
+					</p>
+
+				<?php endif; ?>
+
             </div>
         </div>
     </div>

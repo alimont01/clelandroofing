@@ -46,7 +46,7 @@
         },
         {
             "key": "field_671ba36b76231",
-            "label": "Email",
+            "label": "Email address",
             "name": "email",
             "aria-label": "",
             "type": "email",
@@ -63,6 +63,48 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_6a954b58105e9",
+            "label": "Email Subject",
+            "name": "contact_email_subject",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6a954b74105ea",
+            "label": "Email Body Content",
+            "name": "contact_email_body",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
         },
         {
             "key": "field_6a6c7fd3cc3a9",
@@ -218,5 +260,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1786716792
+    "modified": 1788169220
 }
