@@ -15,7 +15,7 @@
                     <?php $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
                         $query_args = array(
                             'post_type' => 'post',
-                            'cat' => 10,
+                            'category_name'  => 'staff-news',
                             'posts_per_page' => 12,
                             'paged' => $paged,
                             'order' => 'DESC',
