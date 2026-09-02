@@ -587,6 +587,34 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_6a983ba814b9c": {
+                    "key": "layout_6a983ba814b9c",
+                    "name": "staff_latest_news",
+                    "label": "Staff Latest News",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6a983bc114b9d",
+                            "label": "",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Simply show the latest Staff News Posts",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_6a7f23808c041": {
                     "key": "layout_6a7f23808c041",
                     "name": "show_contact_details",
@@ -891,5 +919,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1787321498
+    "modified": 1788361881
 }

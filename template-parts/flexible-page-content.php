@@ -37,6 +37,8 @@ if ( is_home() && ! is_front_page() ) {
 			<?php get_template_part( 'template-parts/flexi-blocks/projects-list' ); ?>
 		<?php elseif ( get_row_layout() == 'a_person_block' ) : ?>
 			<?php get_template_part( 'template-parts/flexi-blocks/a-person' ); ?>
+		<?php elseif ( get_row_layout() == 'staff_latest_news' ) : ?>
+			<?php get_template_part( 'template-parts/flexi-blocks/staff-news-feed' ); ?>
 		<?php endif; ?>
 	<?php endwhile; ?>
 <?php endif; ?>
