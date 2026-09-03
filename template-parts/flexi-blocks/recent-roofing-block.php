@@ -63,7 +63,7 @@
 	<div class="container z-top">
 		<div class="row">
 			<div class="col-12 text-center">
-				<a class="btn-white mt-2 d-inline-block" href="/our-work/" target="_blank">View our work</a>
+				<a class="btn-white mt-2 d-inline-block" href="/our-work/">View our work</a>
 			</div>
 		</div>
 	</div>

@@ -8,41 +8,43 @@
 				</h2>
 			</div>
 			<div class="col-lg-8 ps-lg-5">
+				<?php if( have_rows('add_a_job') ): ?>
 
-					<h3 class="mt-0 text-blue mb-4">Experienced Roofer</h3>
+					<?php while( have_rows('add_a_job') ): the_row(); ?>
+					
+						<h3 class="mt-0 text-blue mb-4"><?php echo acf_esc_html( get_sub_field('job_title') ); ?></h3>
 
-					<div class="job-details mb-4">
-						<p class="mb-1">
-							<strong>Location:</strong> Edinburgh / Central Scotland
-						</p>
-						<p class="mb-1">
-							<strong>Job Type:</strong> Full-time, Permanent
-						</p>
-						<p class="mb-0">
-							<strong>Salary:</strong> Competitive, depending on experience
-						</p>
-					</div>
+						<div class="job-details mb-4">
+							<?php if( get_sub_field('location') ): ?>
+								<p class="mb-1">
+									<strong>Location:</strong> 
+									<?php echo acf_esc_html( get_sub_field('location') ); ?>
+								</p>
+							<?php endif; ?>
+							<?php if( get_sub_field('job_type') ): ?>
+								<p class="mb-1">
+									<strong>Job Type:</strong> 
+									<?php echo acf_esc_html( get_sub_field('job_type') ); ?>
+								</p>
+							<?php endif; ?>
+							<?php if( get_sub_field('person_picture') ): ?>
+								<p class="mb-0">
+									<strong>Salary:</strong> 
+									<?php echo acf_esc_html( get_sub_field('caption') ); ?>
+								</p>
+							<?php endif; ?>
+						</div>
+						
+						<?php echo acf_esc_html( get_sub_field('job_description') ); ?>
 
+					<?php endwhile; ?>
+
+				<?php else: ?>
+					<h3 class="mt-0 fs-4 text-blue mb-4">No Current Vacancies</h3>
 					<p>
-						Cleland Roofing Solutions is looking for an experienced roofer to join our team,
-						working on a range of domestic and commercial roofing projects across Edinburgh
-						and Central Scotland.
+						We don’t have any open positions at the moment, but we’re always happy to hear from experienced, reliable people who may be a good fit for the Cleland Roofing Solutions team. If you’d like to be considered for future opportunities, please send us your CV using the form below.
 					</p>
-
-					<p><strong>We’re looking for someone with:</strong></p>
-
-					<ul>
-						<li>Previous roofing experience</li>
-						<li>A good knowledge of roofing systems and materials</li>
-						<li>A strong approach to health and safety</li>
-						<li>A reliable and professional attitude</li>
-						<li>A full UK driving licence</li>
-					</ul>
-
-					<p class="mt-4">
-						<strong>Interested?</strong> Complete the application form below and upload your CV.
-					</p>
-
+				<?php endif; ?>
 			</div>
 		</div>
 	</div>

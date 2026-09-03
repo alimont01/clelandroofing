@@ -77,8 +77,13 @@ footer a:hover::after {
     color: #fff;
 }
 .text-blue,
-.text-blue a {
+.text-blue a,
+p a  {
     color: #332492;
+}
+p a:hover {
+  color: #000;
+  text-decoration: underline;
 }
 .bg-grad {
     background: #330175;
