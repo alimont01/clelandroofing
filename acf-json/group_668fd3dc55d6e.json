@@ -782,13 +782,13 @@
                 "layout_6a885acee5c4d": {
                     "key": "layout_6a885acee5c4d",
                     "name": "a_person_block",
-                    "label": "A Person Block",
-                    "display": "table",
+                    "label": "Meet the Team",
+                    "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_6a885ae1e5c4f",
-                            "label": "Name",
-                            "name": "persons_name",
+                            "key": "field_6a9977ff8f59a",
+                            "label": "Block title",
+                            "name": "block_title_team",
                             "aria-label": "",
                             "type": "text",
                             "instructions": "",
@@ -807,11 +807,11 @@
                             "append": ""
                         },
                         {
-                            "key": "field_6a885b03e5c50",
-                            "label": "Position",
-                            "name": "persons_position",
+                            "key": "field_6a9977508f595",
+                            "label": "Add a person",
+                            "name": "add_a_person",
                             "aria-label": "",
-                            "type": "text",
+                            "type": "repeater",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -820,59 +820,107 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
-                            "maxlength": "",
-                            "allow_in_bindings": 0,
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        },
-                        {
-                            "key": "field_6a885b11e5c51",
-                            "label": "Bio",
-                            "name": "bio",
-                            "aria-label": "",
-                            "type": "textarea",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "allow_in_bindings": 0,
-                            "rows": 6,
-                            "placeholder": "",
-                            "new_lines": "br"
-                        },
-                        {
-                            "key": "field_6a885b22e5c52",
-                            "label": "Picture",
-                            "name": "person_picture",
-                            "aria-label": "",
-                            "type": "image",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "array",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "",
-                            "mime_types": "",
-                            "allow_in_bindings": 0,
-                            "preview_size": "thumbnail"
+                            "layout": "table",
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": "",
+                            "button_label": "Add a person",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_6a9977bd8f599",
+                                    "label": "Picture",
+                                    "name": "person_picture",
+                                    "aria-label": "",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "id",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": "",
+                                    "allow_in_bindings": 0,
+                                    "preview_size": "thumbnail",
+                                    "parent_repeater": "field_6a9977508f595"
+                                },
+                                {
+                                    "key": "field_6a9977688f596",
+                                    "label": "Name",
+                                    "name": "persons_name",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_6a9977508f595"
+                                },
+                                {
+                                    "key": "field_6a9977918f597",
+                                    "label": "Position",
+                                    "name": "persons_position",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_6a9977508f595"
+                                },
+                                {
+                                    "key": "field_6a9977a58f598",
+                                    "label": "Bio",
+                                    "name": "bio",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "rows": "",
+                                    "placeholder": "",
+                                    "new_lines": "br",
+                                    "parent_repeater": "field_6a9977508f595"
+                                }
+                            ]
                         }
                     ],
                     "min": "",
@@ -919,5 +967,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1788361881
+    "modified": 1788443335
 }
