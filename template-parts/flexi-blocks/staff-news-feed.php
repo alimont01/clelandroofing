@@ -1,6 +1,6 @@
 	<div class="container-fluid mb-4 mb-lg-5">
 
-		<div class="container py-4 py-lg-5">
+		<div class="container mb-4">
 			<div class="row">
 				<div class="col-12 text-center">
 					<h2 class="text-blue">
@@ -16,7 +16,7 @@
                         $query_args = array(
                             'post_type' => 'post',
                             'category_name'  => 'staff-news',
-                            'posts_per_page' => 3,
+                            'posts_per_page' => 4,
                             'order' => 'DESC',
                             'orderby' => 'date',
                             );
@@ -28,9 +28,9 @@
                     $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'news-post' );
                     ?>
 
-						<div class="col-sm-6 col-lg-4 mb-4">
+						<div class="col-sm-6 col-lg-3 mb-4">
 							<?php if ( has_post_thumbnail() ) : ?>
-								<img class="w-100" src="<?php echo $thumb['0'];?>" alt="<?php the_title(); ?>">
+								<img class="staff-news" src="<?php echo $thumb['0'];?>" alt="<?php the_title(); ?>">
 							<?php else: ?> 
 								<?php 
 								$image = get_field('placeholder_image', 'option');
