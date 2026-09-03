@@ -1,4 +1,4 @@
-<div class="container-fluid text-blue">
+<div class="container-fluid ">
         <div class="container">
           <div class="row g-4">
 
@@ -19,7 +19,7 @@
 					<?php endif; ?> 
 				</div>
 				<div class="col-sm-9">
-					<h2 class="mt-0 mb-4">
+					<h2 class="mt-0 mb-4 fs-3 text-blue">
 						<?php the_title(); ?>
 					</h2>
 						<?php

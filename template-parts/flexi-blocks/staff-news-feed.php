@@ -11,13 +11,12 @@
 
 	<div class="container-fluid pb-4 pb-lg-5">
         <div class="container">
-                <div class="row">
+                <div class="row g-4">
                     <?php $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
                         $query_args = array(
                             'post_type' => 'post',
                             'category_name'  => 'staff-news',
-                            'posts_per_page' => 12,
-                            'paged' => $paged,
+                            'posts_per_page' => 4,
                             'order' => 'DESC',
                             'orderby' => 'date',
                             );
@@ -42,7 +41,7 @@
 							<?php endif; ?> 
 						</div>
 						<div class="col-sm-9">
-							<h2 class="mt-0 mb-4">
+							<h2 class="mt-0 mb-4 fs-3 text-blue">
 								<?php the_title(); ?>
 							</h2>
 								<?php
@@ -60,26 +59,6 @@
 
                     <?php endwhile; ?> 
                 </div>
-                <?php if ($the_query->max_num_pages > 1) { // check if the max number of pages is greater than 1  ?>
-                <nav class="row justify-content-between blue-text prev-next-posts">
-                    <div class="col-2">
-                        <div class="prev-posts-link fw-bold">
-                            <?php echo get_next_posts_link( '< View more', $the_query->max_num_pages ); ?>
-                        </div>
-                    </div>
-                    <?php $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : false;
-                        if ( $paged === false ): ?>
-                        
-                    <?php else: ?>
-                        <div class="col-2 text-end">
-                            <div class="next-posts-link fw-bold text-end">
-                                <?php echo get_previous_posts_link( 'Go back >' ); ?>
-                            </div>
-                        </div>
-                <?php endif; ?>
-                </nav>
-                    
-                <?php } ?>
 
                 <?php else: ?>
                 <article>
@@ -88,5 +67,15 @@
                 </article>
                 <?php endif; ?>
             </div>
+        </div>
+    </div>
+
+	<div class="container pb-4 pb-lg-5">
+        <div class="row">
+			<div class="col-12 text-center">
+				<a class="btn-blue mt-2 d-inline-block" href="/category/staff-news/">
+					View all Staff News
+				</a>
+			</div>
         </div>
     </div>
