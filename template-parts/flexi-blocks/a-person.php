@@ -20,14 +20,12 @@
 			<?php while( have_rows('add_a_person') ): the_row(); 
 			$image = get_sub_field('person_picture');
 			?>
-				<div class="col-12">
-					<div class="bg-white d-flex flex-wrap">
+				<div class="col-md-6 col-lg-4 col-xl-3">
+					<div class="bg-white d-flex flex-wrap h-100 align-content-start">
 						<?php if( get_sub_field('person_picture') ): ?>
-							<div class="col-md-2">
-								<?php echo wp_get_attachment_image( $image, 'cover-img', "", ["class" => "w-100"] ); ?>
-							</div>
+							<?php echo wp_get_attachment_image( $image, 'news-post', "", ["class" => "w-100"] ); ?>
 						<?php endif; ?>
-						<div class="col p-4">
+						<div class="p-4">
 							<?php if( get_sub_field('persons_name') ): ?>
 								<h4 class="mt-0 mb-1 text-blue"><?php echo acf_esc_html( get_sub_field('persons_name') ); ?></h4>
 							<?php endif; ?>
