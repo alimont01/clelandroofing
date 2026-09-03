@@ -6,7 +6,7 @@
 		<div class="container py-4 py-lg-5">
 			<div class="row">
 				<div class="col-12 text-center">
-					<h2 class="text-blue">
+					<h2 class="mt-0 text-blue">
 						<?php the_sub_field('block_title_team'); ?>
 					</h2>
 				</div>
@@ -16,13 +16,13 @@
 
 	<?php if( have_rows('add_a_person') ): ?>
 	<div class="container mb-4 remove-p-margin">
-		<div class="row">
+		<div class="row g-4">
 			<?php while( have_rows('add_a_person') ): the_row(); 
 			$image = get_sub_field('person_picture');
 			?>
 				<div class="col-12">
 					<div class="bg-white d-flex flex-wrap">
-						<div class="col-3">
+						<div class="col-sm-2">
 							<?php echo wp_get_attachment_image( $image, 'full', "", ["class" => "w-100"] ); ?>
 						</div>
 						<div class="col p-4">
