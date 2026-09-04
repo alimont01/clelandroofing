@@ -231,6 +231,7 @@ img.w-100 {
 }
 .hero {
   z-index: 10;
+  padding-top: 80px;
 }
 .hero-min-hight {
   min-height: 350px;

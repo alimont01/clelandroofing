@@ -15,7 +15,7 @@ if ( empty( $thumb_alt ) ) {
 
 <?php if ( is_front_page()  ) : ?>
 	<div class="container-fluid position-relative d-flex align-items-center mb-4 mb-lg-2 bg-grad text-white hp-hero">
-			<div class="container pt-2 pb-4 py-lg-5 z-top-top">
+			<div class="container pt-5 pt-lg-2 pb-4 py-lg-5 z-top-top">
 				<div class="row justify-content-center">
 					<div class="col-lg-8 text-center">
 						<h1 class="mt-0 mb-4">
