@@ -3,9 +3,9 @@
 		<div class="row justify-content-center py-5">
 			<div class="col-12 col-lg-7 text-center">
 				<h2 class="mt-0 mb-3">
-					Trusted by Customers Across Scotland
+					Recent Roofing Projects
 				</h2>
-				<p>Read customer reviews, view Cleland Roofing Solutions’ trusted trader profiles, or leave your own feedback.</p>
+				<p>Explore completed roofing projects across Scotland and Northern England, including domestic, commercial, repair, and specialist roofing work.</p>
 			</div>
 		</div>
 	</div>
@@ -15,7 +15,7 @@
 
 			<!-- Before image -->
 			<img
-				src="<?php echo get_template_directory_uri(); ?>/assets/img/roof-before.jpg" alt="Cleland Roofing Solutions">"
+				src="<?php echo get_template_directory_uri(); ?>/assets/img/roof-before.jpg"
 				alt="Roof before restoration"
 				class="before-after__image before-after"
 			>
@@ -23,7 +23,7 @@
 			<!-- After image -->
 			<div class="before-after__after">
 				<img
-					src="<?php echo get_template_directory_uri(); ?>/assets/img/roof-after.jpg" alt="Cleland Roofing Solutions">"
+					src="<?php echo get_template_directory_uri(); ?>/assets/img/roof-after.jpg"
 					alt="Roof after restoration"
 					class="before-after__image before-after"
 				>

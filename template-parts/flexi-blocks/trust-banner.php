@@ -7,7 +7,7 @@
 						<h2 class="mt-0 mb-3">
 							Trusted by Customers Across Scotland
 						</h2>
-						<span class="mb-3">
+						<span class="mb-3 d-block">
 							<p>Read customer reviews, view Cleland Roofing Solutions’ trusted trader profiles, or leave your own feedback.</p>
 						</span>
 						<div class="d-flex flex-wrap">
