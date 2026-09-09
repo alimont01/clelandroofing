@@ -6,7 +6,7 @@
  */
 
 /** Banner area on on pages */
-$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'single-news' );
 ?>
 
 <main class="site-main">
@@ -15,7 +15,7 @@ $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' )
 	<div class="container-fluid position-relative d-flex align-items-center bg-grad mb-4 mb-lg-5">
 		<div class="container pt-lg-5 hero pb-5">
 			<div class="row mt-5">
-				<div class="col-lg-6 mt-5 text-white">
+				<div class="col-lg-9 mt-5 text-white">
 					<h1 class="my-4">
 						<?php the_title(); ?>
 					</h1>
@@ -34,7 +34,7 @@ $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' )
 				<div class="row justify-content-center">
 					<div class="col-8">
 						<?php if ( has_post_thumbnail() ) : ?>
-							<img class="fw-image mb-4" src="<?php echo $thumb['0'];?>" alt="<?php the_title(); ?> - cleland roofing solutions">
+							<img class="w-100 mb-4" src="<?php echo $thumb['0'];?>" alt="<?php the_title(); ?> - cleland roofing solutions">
 						<?php endif; ?> 
 						<?php the_content();?>
 					</div>
