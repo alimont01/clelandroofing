@@ -548,7 +548,10 @@ body.mobile-menu-open #mobile-menu li:nth-child(8) { animation-delay: 0.91s; }
   object-fit: cover;
   height: 190px;
 }
-
+.border-light {
+  --bs-border-opacity: 1 !important;
+  border-color: rgb(160, 160, 160) !important;
+}
 /* Responsive styles */
 @media (max-width: 1399px) {
 }

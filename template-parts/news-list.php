@@ -6,7 +6,7 @@
               <?php while ( have_posts() ) : the_post();
               $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'news-post' ); ?>
 
-				<div class="col-sm-3">
+				<div class="col-md-3">
 					<?php if ( has_post_thumbnail() ) : ?>
 						<img class="w-100" src="<?php echo $thumb['0'];?>" alt="<?php the_title(); ?>">
 					<?php else: ?> 
@@ -18,11 +18,11 @@
 						} ?>
 					<?php endif; ?> 
 				</div>
-				<div class="col-sm-9">
+				<div class="col-md-9 d-flex flex-column">
 					<h2 class="mt-0 mb-4 fs-3 text-blue">
 						<?php the_title(); ?>
 					</h2>
-					<p>
+					<p class="flex-grow-1">
 						<?php
 						$excerpt = get_the_excerpt();
 						$limit   = 54;
@@ -35,6 +35,8 @@
 
 						<?php endif; ?>
 					</p>
+
+					<hr class="d-none d-md-block border-light mb-1">
 
 				</div>
 
