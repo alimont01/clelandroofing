@@ -22,6 +22,7 @@
 					<h2 class="mt-0 mb-4 fs-3 text-blue">
 						<?php the_title(); ?>
 					</h2>
+					<p>
 						<?php
 						$excerpt = get_the_excerpt();
 						$limit   = 45;
@@ -33,6 +34,8 @@
 							<a href="<?php the_permalink(); ?>">Read more</a>
 
 						<?php endif; ?>
+					</p>
+
 				</div>
 
               <?php endwhile; ?>
