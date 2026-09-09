@@ -3,7 +3,7 @@ $image             = get_sub_field('add_a_full_width_image');
 $constrain_width   = get_sub_field('constrain_image_to_body_content_width');
 $constrain_height  = get_sub_field('constrain_image_height');
 
-$image_class = $constrain_height ? 'w-100' : 'fw-image';
+$image_class = $constrain_height ? 'fw-image' : 'w-100';
 ?>
 
 <?php if ( ! empty( $image ) ) : ?>

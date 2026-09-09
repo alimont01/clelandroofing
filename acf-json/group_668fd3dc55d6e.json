@@ -835,7 +835,7 @@
                             "name": "constrain_image_height",
                             "aria-label": "",
                             "type": "true_false",
-                            "instructions": "Set to 'No' if you wish to avoid image cropping",
+                            "instructions": "'No' avoids image cropping",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -1122,5 +1122,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1788949081
+    "modified": 1788950170
 }
