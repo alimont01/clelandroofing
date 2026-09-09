@@ -607,6 +607,11 @@ body.mobile-menu-open #mobile-menu li:nth-child(8) { animation-delay: 0.91s; }
 	padding-right: 16px;
 }
 
+.footer-text-bigger-lg {
+  font-size: 22px;
+  line-height: 0;
+  margin-top: 20px;
+}
 
 /* Responsive styles */
 @media (max-width: 1399px) {
@@ -616,6 +621,11 @@ body.mobile-menu-open #mobile-menu li:nth-child(8) { animation-delay: 0.91s; }
 }
 
 @media (max-width: 991px) {
+  .footer-text-bigger-lg {
+    font-size: inherit;
+    line-height: inherit;
+    margin-top: auto;
+  }
 }
 
 @media (max-width: 767px) {

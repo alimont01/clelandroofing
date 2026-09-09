@@ -49,7 +49,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-12 d-flex flex-wrap justify-content-center">
+            <div class="col-12 d-flex flex-wrap justify-content-center footer-text-bigger-lg">
                 <?php if( get_field('phone_no', 'option') ): ?>
                     <p class="fw-bold mx-4 mb-2">
                         <?php the_field('phone_no', 'option'); ?>
