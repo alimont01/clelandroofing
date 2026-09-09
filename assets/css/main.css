@@ -552,6 +552,62 @@ body.mobile-menu-open #mobile-menu li:nth-child(8) { animation-delay: 0.91s; }
   --bs-border-opacity: 1 !important;
   border-color: rgb(160, 160, 160) !important;
 }
+.screen-reader-text {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	padding: 0 !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	clip: rect(0, 0, 0, 0) !important;
+	white-space: nowrap !important;
+	border: 0 !important;
+}
+.navigation.pagination {
+	display: flex;
+	justify-content: center;
+}
+
+.navigation.pagination .nav-links {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.navigation.pagination .page-numbers {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  height: 42px;
+  padding: 0 12px;
+  border: 1px solid #000;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s ease;
+  border-radius: 5px;
+}
+
+.navigation.pagination .page-numbers:hover {
+	background: #f2f2f2;
+}
+
+.navigation.pagination .page-numbers.current {
+	background: #212529;
+	color: #fff;
+	border-color: #212529;
+}
+
+.navigation.pagination .prev,
+.navigation.pagination .next {
+	min-width: auto;
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+
 /* Responsive styles */
 @media (max-width: 1399px) {
 }

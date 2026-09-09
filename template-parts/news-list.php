@@ -51,7 +51,7 @@
 
           </div>
 
-          <div class="mt-5">
+          <div class="my-5 text-blue">
             <?php
             the_posts_pagination( array(
               'mid_size'  => 2,
