@@ -25,7 +25,7 @@
 					<p>
 						<?php
 						$excerpt = get_the_excerpt();
-						$limit   = 45;
+						$limit   = 54;
 
 						echo wp_trim_words( $excerpt, $limit );
 
