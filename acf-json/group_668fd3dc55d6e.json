@@ -806,15 +806,36 @@
                             "max_size": "",
                             "mime_types": "",
                             "allow_in_bindings": 0,
-                            "preview_size": "medium"
+                            "preview_size": "thumbnail"
                         },
                         {
                             "key": "field_6a7c6e2ef35b2",
-                            "label": "Constrain image to body content width",
+                            "label": "Constrain image width",
                             "name": "constrain_image_to_body_content_width",
                             "aria-label": "",
                             "type": "true_false",
                             "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "allow_in_bindings": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "ui": 1
+                        },
+                        {
+                            "key": "field_6aa1300440a42",
+                            "label": "Constrain image height",
+                            "name": "constrain_image_height",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Set to 'No' if you wish to avoid image cropping",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -1101,5 +1122,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1788450916
+    "modified": 1788949081
 }

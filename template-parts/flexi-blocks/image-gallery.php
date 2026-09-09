@@ -71,7 +71,7 @@
 
                 <img
                     id="galleryModalImage"
-                    class="img-fluid"
+                    class="img-fluid gallery-modal-image"
                     src=""
                     alt=""
                 >

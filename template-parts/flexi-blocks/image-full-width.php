@@ -1,27 +1,33 @@
+<?php
+$image             = get_sub_field('add_a_full_width_image');
+$constrain_width   = get_sub_field('constrain_image_to_body_content_width');
+$constrain_height  = get_sub_field('constrain_image_height');
 
-    <div class="container-fluid px-0 pb-4 pb-lg-5">
-		<?php if( get_sub_field('constrain_image_to_body_content_width') ): ?>
-    		<div class="container">
+$image_class = $constrain_height ? 'w-100' : 'fw-image';
+?>
+
+<?php if ( ! empty( $image ) ) : ?>
+
+	<div class="container-fluid px-0 pb-4 pb-lg-5">
+
+		<?php if ( $constrain_width ) : ?>
+			<div class="container">
 				<div class="row">
 					<div class="col-12">
-						<div class="w-100">
-							<?php 
-							$image = get_sub_field('add_a_full_width_image');
-							if( !empty( $image ) ): ?>
-								<img class="fw-image" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-							<?php endif; ?>
-						</div>
+		<?php endif; ?>
+
+						<img 
+							class="<?php echo esc_attr( $image_class ); ?>"
+							src="<?php echo esc_url( $image['url'] ); ?>" 
+							alt="<?php echo esc_attr( $image['alt'] ); ?>"
+						/>
+
+		<?php if ( $constrain_width ) : ?>
 					</div>
 				</div>
 			</div>
-		<?php else: ?>
-
-			<?php 
-			$image = get_sub_field('add_a_full_width_image');
-			if( !empty( $image ) ): ?>
-				<img class="fw-image" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-			<?php endif; ?>
-
-
 		<?php endif; ?>
-    </div>
+
+	</div>
+
+<?php endif; ?>
