@@ -15,10 +15,10 @@ get_header();
 							<?php the_title(); ?>
 						</h1>
 						<?php if( get_field('hero_intro_text') ): ?>
-							<p class=""><?php the_field('hero_intro_text'); ?></p>
+							<p class="mb-4"><?php the_field('hero_intro_text'); ?></p>
 						<?php endif; ?>
 
-						<div class="w-100 d-flex justify-content-center flex-wrap">
+						<div class="w-100 d-flex justify-content-center flex-wrap flex-column flex-sm-row">
 							<?php 
 							$link = get_field('hero_button_link');
 							if( $link ): 

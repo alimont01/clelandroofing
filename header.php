@@ -21,12 +21,12 @@
   </h1>
       <div class="container py-3 z-top">
         <div class="row align-items-center">
-            <div class="col-7 col-sm-5 col-lg-2">
+            <div class="col-5 col-md-4 col-lg-3 col-xl-2">
               <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
                 <img class="w-100" src="<?php echo get_template_directory_uri(); ?>/assets/img/cleland-roofing-solutions-logo-white.svg" alt="Cleland Roofing Solutions Logo">
               </a>
             </div>
-            <div class="col-5 col-sm-7 col-lg-10 d-flex flex-column align-items-end">
+            <div class="col-7 col-md-8 col-lg-9 col-xl-10 d-flex flex-column align-items-end">
                 <?php
                 wp_nav_menu( array(
                     'theme_location' => 'primary',
