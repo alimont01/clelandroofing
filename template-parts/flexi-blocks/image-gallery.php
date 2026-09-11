@@ -14,7 +14,7 @@
 	<?php endif; ?>
 
     <div class="container">
-        <div class="row">
+        <div class="row g-4">
             <?php 
             $images = get_sub_field('add_images_gallery');
 

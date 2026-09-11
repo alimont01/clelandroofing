@@ -1,7 +1,7 @@
 <div class="container mb-4 mb-lg-5">
 	<div class="row">
 		<div class="col-12">
-			<div class="d-flex flex-wrap align-items-center text-white p-4 bg-grad position-relative">
+			<div class="d-flex flex-wrap align-items-start text-white p-4 bg-grad position-relative">
 				<div class="col-12 col-lg-6 col-xl-9 d-flex flex-wrap align-items-center z-top">
 					<div class="">
 						<?php if( get_sub_field('title_call_to') ): ?>
@@ -21,12 +21,13 @@
 							$link_title = $link['title'];
 							$link_target = $link['target'] ? $link['target'] : '_self';
 							?>
-							<a class="btn-white mt-2 d-inline-block" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+							<a class="btn-white mt-2 d-inline-block mb-4 mb-lg-2" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
 						<?php endif; ?>
 					</div>
 				</div>
-				<div class="col-12 col-lg-6 col-xl-3 text-start text-lg-end">
-					{get cards}
+				<div class="col-12 col-lg-6 col-xl-3 d-flex justify-content-lg-end z-top">
+					<img class="payment-card me-2" src="<?php echo get_template_directory_uri(); ?>/assets/img/mastcard.svg" alt="mastcard">
+					<img class="payment-card" src="<?php echo get_template_directory_uri(); ?>/assets/img/visa.svg" alt="visa">
 				</div>
 				<img class="cover-img position-absolute start-0 top-0" src="<?php echo get_template_directory_uri(); ?>/assets/img/call-to-action-bg.svg" alt="Call to action graphic">
 			</div>

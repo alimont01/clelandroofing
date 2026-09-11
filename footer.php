@@ -123,7 +123,7 @@
             <div class="col-md-9 mb-3 mb-lg-0">
                 <p class="small mb-2">&copy; <?php echo esc_html( date_i18n( 'Y' ) ); ?> <?php bloginfo( 'name' ); ?> - Companies House Registration No. SC670470 - VAT Registered 359 8055 58</p>
             </div>
-            <div class="col-md-3 text-md-end">
+            <div class="col-md-3 text-center text-md-end">
                 <a href="https://alizan.uk/" target="_blank">
                     <img class="alizan-logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/alizan-logo-black.svg" alt="Alizan Logo">
                 </a>
