@@ -32,7 +32,7 @@ $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'single-
 		<div class="container-fluid mb-4 mb-lg-5">
 			<div class="container content">
 				<div class="row justify-content-center">
-					<div class="col-8">
+					<div class="col-lg-8">
 						<?php if ( has_post_thumbnail() ) : ?>
 							<img class="w-100 mb-4" src="<?php echo $thumb['0'];?>" alt="<?php the_title(); ?> - cleland roofing solutions">
 						<?php endif; ?> 
