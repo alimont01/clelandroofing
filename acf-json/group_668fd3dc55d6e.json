@@ -274,7 +274,26 @@
                     "name": "trust_banner",
                     "label": "Trust banner",
                     "display": "block",
-                    "sub_fields": [],
+                    "sub_fields": [
+                        {
+                            "key": "field_6aabb177a6445",
+                            "label": "",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Simply show the Trust Banner",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
                     "min": "",
                     "max": ""
                 },
@@ -946,5 +965,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1788961584
+    "modified": 1789636995
 }

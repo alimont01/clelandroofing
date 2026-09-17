@@ -471,3 +471,45 @@ function cleland_register_project_type_taxonomy() {
 
 }
 add_action( 'init', 'cleland_register_project_type_taxonomy' );
+
+/**
+ * Hide featured image on front page
+ */
+function cleland_hide_featured_image_on_front_page() {
+
+	global $post;
+
+	if ( ! $post ) {
+		return;
+	}
+
+	$front_page_id = (int) get_option( 'page_on_front' );
+
+	if ( (int) $post->ID === $front_page_id ) {
+		remove_meta_box( 'postimagediv', 'page', 'side' );
+	}
+
+}
+add_action( 'add_meta_boxes_page', 'cleland_hide_featured_image_on_front_page' );
+
+/**
+ * Hide the Page Order field from Page Attributes.
+ */
+function cleland_hide_page_order_field() {
+
+	$screen = get_current_screen();
+
+	if ( ! $screen || $screen->post_type !== 'page' ) {
+		return;
+	}
+
+	?>
+	<style>
+		#pageparentdiv .menu-order-label-wrapper,
+		#pageparentdiv #menu_order {
+			display: none !important;
+		}
+	</style>
+	<?php
+}
+add_action( 'admin_head', 'cleland_hide_page_order_field' );
